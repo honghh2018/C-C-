@@ -6,8 +6,8 @@
 main()
 {
   char string[]="ATCG";
-  getmatch(char str[])
-  std<<*string<<endl;
+  char *result=getmatch(string);
+  std<<*result<<endl;
   system("pause");
 }
 
