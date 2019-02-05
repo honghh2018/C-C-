@@ -1,0 +1,50 @@
+Summary:
+As we all konw, Fibonacci array(sequences)-also called golden spilt sequences-was named by mathematician of Fibonacci, discovered by rabbits
+reproduced, and then people call Fibonacci sequences itself rabbit sequences too.
+
+Fibonacci sequences algorithm achieved:
+First of all, the sequences conform with mathmetical formula-those sequences values at the beginning token the same digit with 1. since 
+equality like f1=1,f2=1,f(n)=f(n-1)+f(n-2) were going to describe Fibonacci algorithm, in which sequences itself used to mathematical induced. 
+
+Realizing the Fibonacci algorithm through C++ language by recursive method:
+#include<iostream>
+#include<stdio.h>
+
+
+main()
+{
+  int data;
+  data=getF(10);
+  printf("The Fibonacci value:%d\n",data);
+}
+
+int getF(int n){
+  if(n==1 || n==2){
+    return 1;
+   }else{
+    return getF(n-1)+getF(n-2);
+   }
+ }
+
+Realizing it by array: 
+getF(int n){
+  int f1,f2,f3; #switch method
+   f1=f2=1;
+  for(int i=2;i<n;i++){
+    f3=f1+f2;
+    f1=f2;
+    f2=f3
+  }   
+return f3;
+}
+
+
+
+
+
+
+
+
+
+
+
