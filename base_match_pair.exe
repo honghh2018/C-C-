@@ -1,0 +1,30 @@
+#include<iostream>
+#include<stdlib.h>
+#include<string>
+#include<algorithm>
+
+main()
+{
+  char string[]="ATCG";
+  getmatch(char str[])
+  std<<*string<<endl;
+  system("pause");
+}
+
+
+char *getmatch(char str[],int n){
+  reverse(*str.begin(),*str.end());
+   for(;str<=str+n;str++){
+    if(*str == 'A'){
+      *str='T';
+    }else if(*str == 'T'){
+      *str='A';
+    }else if(*str == 'C'){
+      *str='G';
+    }else if(*str == 'G'){
+      *str="C";
+    }
+    
+    return str;
+}
+
